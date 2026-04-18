@@ -1,0 +1,33 @@
+package com.gxhenrique.projetoLinks.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.gxhenrique.projetoLinks.entity.User;
+import com.gxhenrique.projetoLinks.repository.UserRepository;
+
+@Service
+public class UserService {
+	
+	@Autowired
+	private UserRepository userRepository;
+	
+	public List<User> fidAll(){
+		return userRepository.findAll();
+	}
+	
+	public User findById(Long id) {
+		
+		Optional<User> obj = userRepository.findById(id);
+		
+		return obj.get();
+	}
+	
+	public void delete(Long id) {
+		
+		userRepository.deleteById(id);
+	}
+}

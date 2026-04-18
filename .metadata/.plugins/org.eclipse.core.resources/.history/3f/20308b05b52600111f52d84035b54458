@@ -1,0 +1,5 @@
+package com.gxhenrique.projetoLinks.entity;
+
+public class User {
+
+}

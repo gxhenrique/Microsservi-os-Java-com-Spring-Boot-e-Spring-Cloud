@@ -1,0 +1,49 @@
+package com.gxhenrique.projetoLinks.security.jwt;
+
+import java.util.Date;
+
+import org.springframework.stereotype.Component;
+
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+
+@Component
+public class JwtUtil {
+
+    private final String SECRET_KEY = "minha_chave_secreta";
+
+    // 🔐 Gerar token
+    public String generateToken(String username) {
+        return Jwts.builder()
+                .setSubject(username) // quem é o usuário
+                .setIssuedAt(new Date()) // data de criação
+                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60)) // 1h
+                .signWith(SignatureAlgorithm.HS256, SECRET_KEY)
+                .compact();
+    }
+
+    // 📥 Pegar username do token
+    public String extractUsername(String token) {
+        return extractClaims(token).getSubject();
+    }
+
+    // 📦 Pegar informações do token
+    public Claims extractClaims(String token) {
+        return Jwts.parser()
+                .setSigningKey(SECRET_KEY)
+                .parseClaimsJws(token)
+                .getBody();
+    }
+
+    // ✅ Validar token
+    public boolean isTokenValid(String token, String username) {
+        final String userToken = extractUsername(token);
+        return (userToken.equals(username) && !isTokenExpired(token));
+    }
+
+    // ⏰ Verifica expiração
+    private boolean isTokenExpired(String token) {
+        return extractClaims(token).getExpiration().before(new Date());
+    }
+}

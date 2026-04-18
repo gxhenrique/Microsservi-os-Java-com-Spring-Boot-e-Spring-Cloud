@@ -1,0 +1,5 @@
+package com.gxhenrique.projetoLinks.security;
+
+public class SecurityConfig {
+
+}

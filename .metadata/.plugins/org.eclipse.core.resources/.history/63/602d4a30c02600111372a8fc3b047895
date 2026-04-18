@@ -1,0 +1,5 @@
+package com.gxhenrique.projetoLinks.services;
+
+public class UserService {
+	
+}

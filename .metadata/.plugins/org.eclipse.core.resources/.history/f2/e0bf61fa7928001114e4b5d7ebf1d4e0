@@ -1,0 +1,10 @@
+package com.gxhenrique.projetoLinks.exceptions;
+
+public class ErrorException {
+	
+	private LocalDateTime timestamp;
+    private int status;
+    private String error;
+    private String message;
+    private String path;
+}

@@ -1,0 +1,13 @@
+package com.example.hrpayroll.service;
+
+import org.springframework.stereotype.Service;
+
+import com.example.hrpayroll.entity.Payment;
+
+@Service
+public class PayrollService {
+		
+	public Payment getPayment(Long id, Integer days) {
+		return new Payment("Bob",200.0, days);
+	}
+}

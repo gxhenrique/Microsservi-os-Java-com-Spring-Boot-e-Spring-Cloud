@@ -1,0 +1,5 @@
+package com.gxhenrique.projetoLinks.exceptions;
+
+public class ResourceNotFoundException {
+
+}

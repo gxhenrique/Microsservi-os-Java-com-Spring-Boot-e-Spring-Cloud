@@ -1,0 +1,5 @@
+package com.gxhenrique.agendador_horarios.infrastructure.entity;
+
+public class Agendamento {
+
+}

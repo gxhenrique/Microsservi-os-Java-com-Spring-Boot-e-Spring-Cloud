@@ -1,0 +1,18 @@
+package com.gxhenrique.projetoLinks.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.gxhenrique.projetoLinks.entity.User;
+import com.gxhenrique.projetoLinks.repository.UserRepository;
+
+public class UserService {
+	
+	@Autowired
+	private UserRepository userRepository;
+	
+	public List<User> fidAll(){
+		return userRepository.findAll();
+	}
+}

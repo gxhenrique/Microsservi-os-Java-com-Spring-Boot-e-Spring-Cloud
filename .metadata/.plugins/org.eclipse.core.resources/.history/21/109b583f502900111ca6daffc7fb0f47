@@ -1,0 +1,5 @@
+package com.gxhenrique.projetoLinks.enums;
+
+public enum UserRole {
+
+}

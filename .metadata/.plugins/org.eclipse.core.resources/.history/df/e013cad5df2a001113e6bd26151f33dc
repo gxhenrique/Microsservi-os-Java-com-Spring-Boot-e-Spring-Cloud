@@ -1,0 +1,5 @@
+package com.gxhenrique.projetoLinks.security.jwt;
+
+public class JwtUtil {
+
+}

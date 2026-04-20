@@ -1,10 +1,11 @@
 eclipse.preferences.version=1
-org.springframework.ide.eclipse.boot.wizard.PreferredSelections.artifactId=hr-payroll
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.cloud-eureka-server=1
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.artifactId=hr-eureka-service
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.bootVersion=3.5.13
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.groupId=com.example
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.javaVersion=17
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.language=java
-org.springframework.ide.eclipse.boot.wizard.PreferredSelections.name=hr-payroll
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.name=hr-eureka-service
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packageName=com.example.hrpayroll
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packaging=jar
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.type=MAVEN

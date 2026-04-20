@@ -1,7 +1,0 @@
-package com.gxhenrique.projetoLinks.repository;
-
-import com.gxhenrique.projetoLinks.entity.User;
-
-public class UserRepository extends JpaRepository<User, Long> {
-
-}

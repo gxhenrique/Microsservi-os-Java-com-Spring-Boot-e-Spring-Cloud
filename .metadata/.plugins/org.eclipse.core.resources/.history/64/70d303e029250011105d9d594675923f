@@ -1,5 +1,0 @@
-package com.gxhenrique.agendador_horarios.infrastructure.repository;
-
-public interface AgendamentoRepository {
-
-}
